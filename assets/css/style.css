@@ -1,32 +1,3 @@
-/* Global foundation styles for Mohamed Elgendy Lawyer */
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-:focus-visible {
-  outline: 3px solid currentColor;
-  outline-offset: 3px;
-}
-
-[dir="rtl"] {
-  text-align: right;
-}
-
-[dir="ltr"] {
-  text-align: left;
-}
-
 /* =========================================================
    Mohamed Elgendy Lawyer — Global Design Foundation
    ========================================================= */
@@ -48,11 +19,76 @@ img {
   --transition-duration: 180ms;
   --container-max-width: 1200px;
 
-  --font-arabic: "Al-Jazeera-Arabic", "Tahoma", "Arial", sans-serif;
+  --font-arabic: "Noto Kufi Arabic", "Tahoma", "Arial", sans-serif;
   --font-english: "Cairo", "Segoe UI", Arial, sans-serif;
 }
 
-/* 2. Global reset and base */
+/* 2. Font faces — locally hosted, open-source web fonts */
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  src: url("../fonts/arabic/noto-kufi-arabic-400.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  src: url("../fonts/arabic/noto-kufi-arabic-500.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  src: url("../fonts/arabic/noto-kufi-arabic-600.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  src: url("../fonts/arabic/noto-kufi-arabic-700.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("../fonts/english/cairo-400.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("../fonts/english/cairo-500.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("../fonts/english/cairo-600.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("../fonts/english/cairo-700.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* 3. Global reset and base */
 *,
 *::before,
 *::after {
@@ -94,7 +130,7 @@ button {
   cursor: pointer;
 }
 
-/* 3. Typography foundation */
+/* 4. Typography foundation */
 h1,
 h2,
 h3,
@@ -123,7 +159,7 @@ h3 {
 }
 
 p {
-  color: var(--color-muted);
+  color: var(--color-text);
 }
 
 a {
@@ -136,17 +172,10 @@ a:hover {
   color: var(--color-accent);
 }
 
-/* 4. Layout and container foundation */
-.container,
-.container-fluid {
-  width: 100%;
-}
+/* 5. Layout foundation */
+/* Bootstrap controls .container widths, breakpoints, and gutters. */
 
-.container {
-  max-width: var(--container-max-width);
-}
-
-/* 5. Reusable button foundation */
+/* 6. Reusable button foundation */
 .btn-brand-primary,
 .btn-brand-secondary,
 .btn-brand-outline {
@@ -205,7 +234,7 @@ a:hover {
   background-color: var(--color-primary);
 }
 
-/* 6. Utility and accessibility foundation */
+/* 7. Utility and accessibility foundation */
 .text-brand-primary {
   color: var(--color-primary);
 }
@@ -227,17 +256,16 @@ a:hover {
   outline-offset: 3px;
 }
 
-/* 7. RTL / LTR adjustments */
-[dir="rtl"] {
-  text-align: right;
+/* 8. RTL / LTR adjustments */
+html[lang="ar"] body {
   font-family: var(--font-arabic);
 }
 
-[dir="ltr"] {
-  text-align: left;
+html[lang="en"] body {
   font-family: var(--font-english);
 }
 
+/* 9. Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
