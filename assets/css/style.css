@@ -27,3 +27,226 @@ img {
   text-align: left;
 }
 
+/* =========================================================
+   Mohamed Elgendy Lawyer — Global Design Foundation
+   ========================================================= */
+
+/* 1. CSS variables */
+:root {
+  --color-primary: #173c32;
+  --color-secondary: #0d2923;
+  --color-accent: #b39a63;
+  --color-text: #173c32;
+  --color-muted: #6f7772;
+  --color-background: #f8f6f1;
+  --color-surface: #d8cbb5;
+  --color-border: rgba(23, 60, 50, 0.16);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --shadow-sm: 0 0.125rem 0.5rem rgba(13, 41, 35, 0.08);
+  --transition-duration: 180ms;
+  --container-max-width: 1200px;
+
+  --font-arabic: "Al-Jazeera-Arabic", "Tahoma", "Arial", sans-serif;
+  --font-english: "Cairo", "Segoe UI", Arial, sans-serif;
+}
+
+/* 2. Global reset and base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-family: var(--font-english);
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 3. Typography foundation */
+h1,
+h2,
+h3,
+p {
+  margin-block-start: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-primary);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+h2 {
+  font-size: clamp(1.625rem, 3vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+p {
+  color: var(--color-muted);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-duration) ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* 4. Layout and container foundation */
+.container,
+.container-fluid {
+  width: 100%;
+}
+
+.container {
+  max-width: var(--container-max-width);
+}
+
+/* 5. Reusable button foundation */
+.btn-brand-primary,
+.btn-brand-secondary,
+.btn-brand-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding-block: 0.625rem;
+  padding-inline: 1.25rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  line-height: 1.2;
+  transition: background-color var(--transition-duration) ease,
+    border-color var(--transition-duration) ease,
+    color var(--transition-duration) ease,
+    box-shadow var(--transition-duration) ease;
+}
+
+.btn-brand-primary {
+  color: #ffffff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-brand-primary:hover,
+.btn-brand-primary:focus-visible {
+  color: #ffffff;
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-brand-secondary {
+  color: var(--color-secondary);
+  background-color: var(--color-surface);
+  border-color: var(--color-surface);
+}
+
+.btn-brand-secondary:hover,
+.btn-brand-secondary:focus-visible {
+  color: var(--color-secondary);
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn-brand-outline {
+  color: var(--color-primary);
+  background-color: transparent;
+  border-color: var(--color-primary);
+}
+
+.btn-brand-outline:hover,
+.btn-brand-outline:focus-visible {
+  color: #ffffff;
+  background-color: var(--color-primary);
+}
+
+/* 6. Utility and accessibility foundation */
+.text-brand-primary {
+  color: var(--color-primary);
+}
+
+.text-brand-muted {
+  color: var(--color-muted);
+}
+
+.bg-brand-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-brand-surface {
+  background-color: var(--color-surface);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* 7. RTL / LTR adjustments */
+[dir="rtl"] {
+  text-align: right;
+  font-family: var(--font-arabic);
+}
+
+[dir="ltr"] {
+  text-align: left;
+  font-family: var(--font-english);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
