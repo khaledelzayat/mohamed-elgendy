@@ -623,3 +623,86 @@ a:hover {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* TASK 06 — LEGAL SERVICES START */
+.services-section {
+  padding-block: clamp(4.5rem, 9vw, 8rem);
+  background-color: var(--color-background);
+  border-block-start: 1px solid var(--color-border);
+}
+
+.services-section__header {
+  margin-block-end: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.services-section__header h2 {
+  max-width: 48rem;
+  margin-block-end: 0;
+}
+
+.services-grid {
+  align-items: stretch;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-block-start: 3px solid var(--color-accent);
+  transition: transform var(--transition-duration) ease,
+    box-shadow var(--transition-duration) ease,
+    border-color var(--transition-duration) ease;
+}
+
+.service-card:hover,
+.service-card:focus-within {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-3px);
+}
+
+.service-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-block-end: 1.75rem;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  font-family: Georgia, serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+.service-card h3 {
+  margin-block-end: 0.75rem;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+}
+
+.service-card p {
+  margin-block-end: 1.5rem;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+
+.service-card .text-link {
+  align-self: flex-start;
+  margin-block-start: auto;
+}
+
+@media (max-width: 575.98px) {
+  .services-section__header {
+    margin-block-end: 2.5rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+}
+
+/* TASK 06 — LEGAL SERVICES END */
