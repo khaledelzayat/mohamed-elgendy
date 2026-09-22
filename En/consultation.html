@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d2923">
+  <title>Legal Consultation | Mohamed Elgendy</title>
+  <meta
+    name="description"
+    content="Submit a legal consultation request to Mohamed Elgendy."
+  >
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="consultation-page">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg site-navbar" aria-label="Main navigation">
+      <div class="container">
+        <a
+          class="navbar-brand site-brand"
+          href="./index.html"
+          aria-label="Return to the homepage"
+        >
+          <img
+            class="site-logo"
+            src="../assets/images/mohamed-elgendy-logo-transparent.png"
+            alt="Mohamed Elgendy Lawyer logo"
+          >
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#consultationNavigation"
+          aria-controls="consultationNavigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="consultationNavigation">
+          <ul class="navbar-nav gap-lg-2 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-consultation" href="./consultation.html">
+                Consultation
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#contact">Contact</a>
+            </li>
+          </ul>
+
+          <a
+            class="site-language-switch"
+            href="../ar/consultation.html"
+            lang="ar"
+            dir="rtl"
+            aria-label="التبديل إلى العربية"
+          >
+            AR
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="consultation-section" aria-labelledby="consultation-title">
+      <div class="container">
+        <div class="row align-items-start g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="consultation-intro">
+              <p class="section-eyebrow">Legal consultation request</p>
+
+              <h1 id="consultation-title">
+                Start with a clear next step
+              </h1>
+
+              <p class="consultation-intro__description">
+                Share a brief description of your request to clarify the nature
+                of the consultation and the appropriate next step for discussing
+                your situation.
+              </p>
+
+              <div class="consultation-notes" aria-label="Important information">
+                <div class="consultation-note">
+                  <span class="consultation-note__mark" aria-hidden="true">01</span>
+                  <p>Provide the basic information related to your request.</p>
+                </div>
+
+                <div class="consultation-note">
+                  <span class="consultation-note__mark" aria-hidden="true">02</span>
+                  <p>Select the consultation type closest to your situation.</p>
+                </div>
+
+                <div class="consultation-note">
+                  <span class="consultation-note__mark" aria-hidden="true">03</span>
+                  <p>Actual submission will be enabled after connecting a processing service.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="consultation-form-wrapper">
+              <form
+                class="consultation-form"
+                id="consultationForm"
+                data-consultation-form
+                novalidate
+              >
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="fullName">
+                      Full Name
+                    </label>
+
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      autocomplete="name"
+                      required
+                      data-required-message="Please enter your full name."
+                    >
+
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="phone">
+                      Phone Number
+                    </label>
+
+                    <input
+                      class="form-control"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      autocomplete="tel"
+                      inputmode="tel"
+                      required
+                      data-required-message="Please enter your phone number."
+                    >
+
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label" for="email">
+                      Email Address
+                    </label>
+
+                    <input
+                      class="form-control"
+                      type="email"
+                      id="email"
+                      name="email"
+                      autocomplete="email"
+                      required
+                      data-required-message="Please enter a valid email address."
+                      data-email-message="Please enter a valid email address."
+                    >
+
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label" for="consultationType">
+                      Consultation Type
+                    </label>
+
+                    <select
+                      class="form-select"
+                      id="consultationType"
+                      name="consultationType"
+                      required
+                      data-required-message="Please select a consultation type."
+                    >
+                      <option value="" selected disabled>
+                        Select consultation type
+                      </option>
+                      <option value="criminal-law">Criminal Law</option>
+                      <option value="civil-matters">Civil Matters</option>
+                      <option value="commercial-matters">Commercial Matters</option>
+                      <option value="general-consultation">
+                        General Legal Consultation
+                      </option>
+                      <option value="other">Other</option>
+                    </select>
+
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label" for="caseDetails">
+                      Consultation Details
+                    </label>
+
+                    <textarea
+                      class="form-control"
+                      id="caseDetails"
+                      name="caseDetails"
+                      rows="6"
+                      minlength="20"
+                      required
+                      data-required-message="Please provide brief consultation details."
+                      data-minlength-message="Please enter at least 20 characters."
+                      aria-describedby="caseDetailsHelp"
+                    ></textarea>
+
+                    <div class="form-text" id="caseDetailsHelp">
+                      Briefly describe your situation without submitting documents
+                      or highly sensitive information.
+                    </div>
+
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="privacyConsent"
+                        name="privacyConsent"
+                        required
+                        data-consent-message="Please provide your consent before continuing."
+                      >
+
+                      <label class="form-check-label" for="privacyConsent">
+                        I agree that my information may be used to contact me
+                        regarding my consultation request.
+                      </label>
+
+                      <div class="invalid-feedback"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <button class="btn-brand-primary consultation-form__submit" type="submit">
+                      Book a Consultation
+                    </button>
+
+                    <p
+                      class="consultation-form__status"
+                      data-form-status
+                      role="status"
+                      aria-live="polite"
+                    ></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2025 Mohamed Elgendy Law Office. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

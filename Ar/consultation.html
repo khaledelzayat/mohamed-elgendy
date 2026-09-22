@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d2923">
+  <title>طلب استشارة قانونية | الأستاذ محمد الجندي</title>
+  <meta
+    name="description"
+    content="أرسل طلب استشارة قانونية إلى مكتب الأستاذ محمد الجندي."
+  >
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="consultation-page">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg site-navbar" aria-label="التنقل الرئيسي">
+      <div class="container">
+        <a
+          class="navbar-brand site-brand"
+          href="./index.html"
+          aria-label="العودة إلى الصفحة الرئيسية"
+        >
+          <img
+            class="site-logo"
+            src="../assets/images/mohamed-elgendy-logo-transparent.png"
+            alt="شعار مكتب محمد الجندي"
+          >
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#consultationNavigation"
+          aria-controls="consultationNavigation"
+          aria-expanded="false"
+          aria-label="فتح قائمة التنقل"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="consultationNavigation">
+          <ul class="navbar-nav gap-lg-2 me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#about">من نحن</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#services">خدماتنا</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-consultation" href="./consultation.html">
+                الاستشارة
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#contact">تواصل معنا</a>
+            </li>
+          </ul>
+
+          <a
+            class="site-language-switch"
+            href="../en/consultation.html"
+            lang="en"
+            dir="ltr"
+            aria-label="Switch to English"
+          >
+            EN
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="consultation-section" aria-labelledby="consultation-title">
+      <div class="container">
+        <div class="row align-items-start g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="consultation-intro">
+              <p class="section-eyebrow">طلب استشارة قانونية</p>
+
+              <h1 id="consultation-title">
+                ابدأ بخطوة واضحة
+              </h1>
+
+              <p class="consultation-intro__description">
+                أرسل تفاصيل طلبك بشكل مختصر، لتوضيح طبيعة الاستشارة والخطوة
+                المناسبة لمناقشة حالتك.
+              </p>
+
+              <div class="consultation-notes" aria-label="معلومات مهمة">
+                <div class="consultation-note">
+                  <span class="consultation-note__mark" aria-hidden="true">01</span>
+                  <p>اكتب المعلومات الأساسية المتعلقة بطلبك.</p>
+                </div>
+
+                <div class="consultation-note">
+                  <span class="consultation-note__mark" aria-hidden="true">02</span>
+                  <p>اختر نوع الاستشارة الأقرب إلى حالتك.</p>
+                </div>
+
+                <div class="consultation-note">
+                  <span class="consultation-note__mark" aria-hidden="true">03</span>
+                  <p>سيتم تفعيل الإرسال الفعلي بعد ربط النموذج بخدمة معالجة.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="consultation-form-wrapper">
+              <form
+                class="consultation-form"
+                id="consultationForm"
+                data-consultation-form
+                novalidate
+              >
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="fullName">
+                      الاسم بالكامل
+                    </label>
+
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      autocomplete="name"
+                      required
+                      data-required-message="يرجى إدخال الاسم بالكامل."
+                    >
+
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="phone">
+                      رقم الهاتف
+                    </label>
+
+                    <input
+                      class="form-control"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      autocomplete="tel"
+                      inputmode="tel"
+                      required
+                      data-required-message="يرجى إدخال رقم الهاتف."
+                    >
+
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label" for="email">
+                      البريد الإلكتروني
+                    </label>
+
+                    <input
+                      class="form-control"
+                      type="email"
+                      id="email"
+                      name="email"
+                      autocomplete="email"
+                      required
+                      data-required-message="يرجى إدخال بريد إلكتروني صحيح."
+                      data-email-message="يرجى إدخال بريد إلكتروني صحيح."
+                    >
+
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label" for="consultationType">
+                      نوع الاستشارة
+                    </label>
+
+                    <select
+                      class="form-select"
+                      id="consultationType"
+                      name="consultationType"
+                      required
+                      data-required-message="يرجى اختيار نوع الاستشارة."
+                    >
+                      <option value="" selected disabled>
+                        اختر نوع الاستشارة
+                      </option>
+                      <option value="criminal-law">القانون الجنائي</option>
+                      <option value="civil-matters">القضايا المدنية</option>
+                      <option value="commercial-matters">القضايا التجارية</option>
+                      <option value="general-consultation">
+                        استشارة قانونية عامة
+                      </option>
+                      <option value="other">نوع آخر</option>
+                    </select>
+
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label" for="caseDetails">
+                      تفاصيل الاستشارة
+                    </label>
+
+                    <textarea
+                      class="form-control"
+                      id="caseDetails"
+                      name="caseDetails"
+                      rows="6"
+                      minlength="20"
+                      required
+                      data-required-message="يرجى كتابة تفاصيل مختصرة عن الاستشارة."
+                      data-minlength-message="يرجى كتابة 20 حرفًا على الأقل."
+                      aria-describedby="caseDetailsHelp"
+                    ></textarea>
+
+                    <div class="form-text" id="caseDetailsHelp">
+                      اكتب وصفًا مختصرًا للحالة دون إرسال مستندات أو معلومات شديدة الحساسية.
+                    </div>
+
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="privacyConsent"
+                        name="privacyConsent"
+                        required
+                        data-consent-message="يرجى الموافقة قبل المتابعة."
+                      >
+
+                      <label class="form-check-label" for="privacyConsent">
+                        أوافق على استخدام بياناتي لغرض التواصل بشأن طلب الاستشارة.
+                      </label>
+
+                      <div class="invalid-feedback"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <button class="btn-brand-primary consultation-form__submit" type="submit">
+                      إرسال طلب الاستشارة
+                    </button>
+
+                    <p
+                      class="consultation-form__status"
+                      data-form-status
+                      role="status"
+                      aria-live="polite"
+                    ></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2025 مكتب محمد الجندي للمحاماة. جميع الحقوق محفوظة.</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
