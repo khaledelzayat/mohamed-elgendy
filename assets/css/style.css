@@ -969,3 +969,167 @@ a:hover {
     padding-block: 2.5rem;
   }
 }
+
+/* =========================================================
+   TASK 11 — RESPONSIVE & UX POLISH
+   ========================================================= */
+
+/* Prevent Bootstrap columns and long content from forcing overflow */
+.container,
+.container-fluid,
+.row,
+[class^="col-"],
+[class*=" col-"] {
+  min-width: 0;
+}
+
+/* Keep the main layout comfortable on narrow screens */
+@media (max-width: 575.98px) {
+  .container {
+    --bs-gutter-x: 1.25rem;
+  }
+
+  .site-header {
+    padding-block-end: 0.5rem;
+  }
+
+  .site-navbar {
+    min-height: 4rem;
+    padding-block: 0.6rem;
+  }
+
+  .site-navbar::after {
+    inset-inline: 12%;
+    bottom: -0.5rem;
+    height: 1rem;
+  }
+
+  .site-navbar .navbar-collapse {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-navbar .navbar-nav {
+    width: 100%;
+  }
+
+  .site-navbar .nav-link {
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding-block: 0.7rem;
+  }
+
+  .site-language-switch {
+    width: fit-content;
+    min-height: 2.75rem;
+  }
+
+  .hero {
+    padding-block: 2.75rem 3.5rem;
+  }
+
+  .hero__content {
+    width: 100%;
+  }
+
+  .hero__title {
+    max-width: 100%;
+    margin-block-end: 1rem;
+    font-size: clamp(1.85rem, 9vw, 2.6rem);
+    overflow-wrap: anywhere;
+  }
+
+  .hero__lead {
+    font-size: 1.05rem;
+  }
+
+  .hero__description {
+    margin-block-end: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .hero__actions {
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .hero__actions a {
+    width: 100%;
+    min-height: 3rem;
+  }
+
+  .hero__media {
+    width: 100%;
+    margin-block-start: 0.25rem;
+  }
+
+  .hero__image-placeholder {
+    width: min(100%, 20rem);
+    padding: 1.5rem;
+  }
+
+  .hero__image-placeholder span,
+  .hero__image-placeholder small {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Improve tablet spacing without changing the desktop structure */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .hero {
+    padding-block: 4rem 5rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2.1rem, 6vw, 3.5rem);
+  }
+
+  .hero__actions a {
+    min-height: 2.9rem;
+  }
+
+  .hero__image-placeholder {
+    width: min(100%, 26rem);
+  }
+}
+
+/* Keep interactive controls comfortable for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .site-navbar .nav-link,
+  .site-language-switch,
+  .hero__actions a,
+  .navbar-toggler {
+    min-height: 2.75rem;
+  }
+}
+
+/* Improve keyboard visibility for controls */
+.site-navbar .navbar-toggler:focus-visible,
+.site-navbar .nav-link:focus-visible,
+.site-language-switch:focus-visible,
+.hero__actions a:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Avoid accidental oversized text on very small screens */
+@media (max-width: 359.98px) {
+  .hero__title {
+    font-size: 1.75rem;
+  }
+
+  .hero__lead {
+    font-size: 1rem;
+  }
+
+  .hero__image-placeholder {
+    width: min(100%, 18rem);
+    padding-inline: 1rem;
+  }
+
+  .site-logo {
+    width: min(9rem, 52vw);
+  }
+}
