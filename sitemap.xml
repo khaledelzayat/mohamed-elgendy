@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Replace example.com after the production domain is confirmed. -->
+<!--
+  GitHub Pages template.
+  Replace YOUR-USERNAME and YOUR-REPOSITORY with the final published path
+  before submitting this sitemap to search engines.
+-->
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
   <url>
-    <loc>https://example.com/ar/</loc>
+    <loc>https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/ar/</loc>
+    <image:image>
+      <image:loc>https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/assets/images/legal-office-placeholder.png</image:loc>
+    </image:image>
   </url>
   <url>
-    <loc>https://example.com/en/</loc>
+    <loc>https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/en/</loc>
+    <image:image>
+      <image:loc>https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/assets/images/legal-office-placeholder.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/ar/consultation.html</loc>
+    <image:image>
+      <image:loc>https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/assets/images/legal-consultation-placeholder.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/en/consultation.html</loc>
+    <image:image>
+      <image:loc>https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/assets/images/legal-consultation-placeholder.png</image:loc>
+    </image:image>
   </url>
 </urlset>
-

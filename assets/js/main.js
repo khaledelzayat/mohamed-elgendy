@@ -1,4 +1,3 @@
-
 /* Main JavaScript entry point */
 (function () {
   'use strict';
@@ -150,4 +149,3 @@
 
 
 })();
-
